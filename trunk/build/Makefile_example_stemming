@@ -1,0 +1,8 @@
+../bin/ExampleStemming: ../bin/tokernizer.o ../bin/porter_stemmer_modified.o ../bin/example_stemming.o
+	gcc ../bin/tokernizer.o ../bin/porter_stemmer_modified.o ../bin/example_stemming.o -o ../bin/ExampleStemming
+../bin/example_stemming.o: ../src/example_stemming.c ../include/keywordengine.h
+	gcc -I ../include/ -c ../src/example_stemming.c -o ../bin/example_stemming.o
+../bin/porter_stemmer_modified.o: ../src/porter_stemmer_modified.c ../include/keywordengine.h
+	gcc -I ../include/ -c ../src/porter_stemmer_modified.c -o ../bin/porter_stemmer_modified.o
+../bin/tokernizer.o: ../src/tokenizer.c ../include/keywordengine.h
+	gcc -I ../include/ -c ../src/tokenizer.c -o ../bin/tokernizer.o

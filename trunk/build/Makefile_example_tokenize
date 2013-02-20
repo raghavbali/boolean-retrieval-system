@@ -1,0 +1,7 @@
+../bin/ExampleTokenize: ../bin/tokernizer.o ../bin/example_tokenize.o
+	gcc ../bin/tokernizer.o ../bin/example_tokenize.o -o ../bin/ExampleTokenize
+../bin/example_tokenize.o: ../src/example_tokenize.c ../include/keywordengine.h
+	gcc -I ../include/ -c ../src/example_tokenize.c -o ../bin/example_tokenize.o
+../bin/tokernizer.o: ../src/tokenizer.c ../include/keywordengine.h
+	gcc -I ../include/ -c ../src/tokenizer.c -o ../bin/tokernizer.o
+

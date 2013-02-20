@@ -1,0 +1,8 @@
+../bin/StopWordRatio: ../bin/plot.o ../bin/tokernizer.o ../bin/stopword_ratio.o
+	gcc ../bin/plot.o ../bin/tokernizer.o ../bin/stopword_ratio.o -o ../bin/StopWordRatio
+../bin/stopword_ratio.o: ../src/stopword_ratio.c ../include/keywordengine.h
+	gcc -I ../include/ -c ../src/stopword_ratio.c -o ../bin/stopword_ratio.o
+../bin/tokernizer.o: ../src/tokenizer.c ../include/keywordengine.h
+	gcc -I ../include/ -c ../src/tokenizer.c -o ../bin/tokernizer.o
+../bin/plot.o: ../src/gnuplot_i.c ../include/keywordengine.h
+	gcc -I ../include/ -c ../src/gnuplot_i.c -o ../bin/plot.o
