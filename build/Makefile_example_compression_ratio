@@ -1,0 +1,12 @@
+../bin/CompressionRatio: ../bin/plot.o ../bin/tokernizer.o ../bin/porter_stemmer_modified.o ../bin/postings_list.o ../bin/compression_ratio.o
+	gcc ../bin/plot.o ../bin/tokernizer.o ../bin/porter_stemmer_modified.o ../bin/postings_list.o ../bin/compression_ratio.o -o ../bin/CompressionRatio
+../bin/compression_ratio.o: ../src/compression_ratio.c ../include/keywordengine.h
+	gcc -I ../include/ -c ../src/compression_ratio.c -o ../bin/compression_ratio.o
+../bin/postings_list.o: ../src/../src/postings_list.c ../include/keywordengine.h
+	gcc -I ../include/ -c ../src/postings_list.c -o ../bin/postings_list.o
+../bin/porter_stemmer_modified.o: ../src/porter_stemmer_modified.c ../include/keywordengine.h
+	gcc -I ../include/ -c ../src/porter_stemmer_modified.c -o ../bin/porter_stemmer_modified.o
+../bin/tokernizer.o: ../src/tokenizer.c ../include/keywordengine.h
+	gcc -I ../include/ -c ../src/tokenizer.c -o ../bin/tokernizer.o
+../bin/plot.o: ../src/gnuplot_i.c ../include/keywordengine.h
+	gcc -I ../include/ -c ../src/gnuplot_i.c -o ../bin/plot.o

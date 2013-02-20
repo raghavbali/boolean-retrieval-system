@@ -1,0 +1,14 @@
+../bin/KeywordExtraction: ../bin/plot.o ../bin/tokernizer.o ../bin/porter_stemmer_modified.o ../bin/postings_list.o ../bin/quicksort.o ../bin/keywordengine.o
+	gcc ../bin/plot.o ../bin/tokernizer.o ../bin/porter_stemmer_modified.o ../bin/postings_list.o ../bin/quicksort.o ../bin/keywordengine.o -o ../bin/KeywordExtraction
+../bin/keywordengine.o: ../src/keywordengine.c ../include/keywordengine.h
+	gcc -I ../include/ -c ../src/keywordengine.c -o ../bin/keywordengine.o
+../bin/quicksort.o: ../src/quicksort.c ../include/keywordengine.h
+	gcc -I ../include/ -c ../src/quicksort.c -o ../bin/quicksort.o
+../bin/postings_list.o: ../src/../src/postings_list.c ../include/keywordengine.h
+	gcc -I ../include/ -c ../src/postings_list.c -o ../bin/postings_list.o
+../bin/porter_stemmer_modified.o: ../src/porter_stemmer_modified.c ../include/keywordengine.h
+	gcc -I ../include/ -c ../src/porter_stemmer_modified.c -o ../bin/porter_stemmer_modified.o
+../bin/tokernizer.o: ../src/tokenizer.c ../include/keywordengine.h
+	gcc -I ../include/ -c ../src/tokenizer.c -o ../bin/tokernizer.o
+../bin/plot.o: ../src/gnuplot_i.c ../include/keywordengine.h
+	gcc -I ../include/ -c ../src/gnuplot_i.c -o ../bin/plot.o
