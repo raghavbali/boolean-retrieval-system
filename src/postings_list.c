@@ -144,7 +144,7 @@ int add_documents_or_files()
 
 int add_document_to_postingslist(char *fileinput)
 {
-    initialize();
+    //initialize();
     FILE *doc_process;
     char *inputfilename=(char *)malloc(sizeof(char)*FILENAME);
     char word_process[wordlength];
@@ -156,12 +156,13 @@ int add_document_to_postingslist(char *fileinput)
         printf("\nCould not read input file %s for postings list :%d\n",fileinput,errno);
         exit(0);
     }
+    add_document_to_list(fileinput);
     while(!feof(doc_process) && currentdoc<maxdocuments)
     {
         fscanf(doc_process,"%s\n",word_process);
         insert_term(word_process);
     }
-            if(currentdoc>=maxdocuments) printf("Warning: Maximum 100 documents can be handled.Document count exceeded 100\n");
+    if(currentdoc>=maxdocuments) printf("Warning: Maximum 100 documents can be handled.Document count exceeded 100\n");
 
     fclose(doc_process);
 
@@ -400,4 +401,83 @@ void not_of(char *first)
         }
     }
     printf("\n No. of documents satisfying this query are %d\n",not_count);
+}
+
+
+int persistent_postingslist(char *fileinput,char *originalfile)
+{
+    FILE *doc_process;
+    char *inputfilename=(char *)malloc(sizeof(char)*FILENAME);
+    char word_process[wordlength];
+
+    strcpy(inputfilename,"../output/");
+    strcat(inputfilename,fileinput);
+    if((doc_process=fopen(inputfilename,"r"))==NULL)
+    {
+        printf("\nCould not read input file %s for postings list :%d\n",fileinput,errno);
+        exit(0);
+    }
+    add_document_to_list(originalfile);
+    while(!feof(doc_process) && currentdoc<maxdocuments)
+    {
+        fscanf(doc_process,"%s\n",word_process);
+        insert_term(word_process);
+    }
+    if(currentdoc>=maxdocuments) printf("Warning: Maximum 100 documents can be handled.Document count exceeded 100\n");
+
+    fclose(doc_process);
+
+
+    return no_of_terms;
+}
+
+
+
+
+
+void serialize_postings_list()
+{
+    struct term *temp;
+    temp=termhead;
+    struct document *temp_term;
+    char convert[5];
+    int flag =0;
+
+
+    FILE *doc_process;
+    char *inputfilename=(char *)malloc(sizeof(char)*FILENAME);
+    char *word_process;
+
+    strcpy(inputfilename,"../cluster/python-fp-growth-master/");
+    strcat(inputfilename,"postingslist.txt");
+    if((doc_process=fopen(inputfilename,"w"))==NULL)
+    {
+        printf("\nCould not read input file %s for postings list :%d\n",inputfilename,errno);
+        exit(0);
+    }
+
+    while(temp!=NULL)
+    {
+        temp_term=temp->firstdoc;
+
+        while(temp_term!=NULL)
+        {
+            //to prevent last line blank
+            if(!flag)
+                {
+                    fprintf(doc_process,"%s %s %d",temp->termname,listofdocs[temp_term->docid].docname,temp_term->termcount);
+                    flag = 1;
+                }
+            else
+                fprintf(doc_process,"\n%s %s %d",temp->termname,listofdocs[temp_term->docid].docname,temp_term->termcount);
+
+            temp_term=temp_term->nextdoc;
+        }
+
+        temp=temp->nextterm;
+
+    }
+
+    fclose(doc_process);
+
 }
