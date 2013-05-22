@@ -36,6 +36,7 @@ int main(int argc, char *argv[])
         array[i]=0;
     }
 
+
     while(!feof(inputfiles))
     {
         fileinput=(char *)malloc(sizeof(char)*FILENAME);
@@ -55,11 +56,13 @@ int main(int argc, char *argv[])
         /* Tokenise and remove stopwords */
         getwords(fileinput);
         /* Add to postings list */
+        initialize();
         before_stemming=add_document_to_postingslist(stemming_file);
 
         /* Apply Porter's Stemmer */
         stemmer(stemming_file);
         /* Add to postings list */
+        initialize();
         after_stemming=add_document_to_postingslist(posting_filename);
 
         ratio=(double)after_stemming/before_stemming;
@@ -125,7 +128,6 @@ int main(int argc, char *argv[])
     getchar();
     /*Closing the files*/
     gnuplot_close(h1);
-
 
     return 0;
 }
