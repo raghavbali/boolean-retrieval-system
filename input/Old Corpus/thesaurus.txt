@@ -1,0 +1,102 @@
+A thesaurus is a reference work that lists words grouped together according to similarity of meaning (containing synonyms and sometimes antonyms), in contrast to a dictionary, which contains definitions and pronunciations. The largest thesaurus in the world is the Historical Thesaurus of the Oxford English Dictionary,[citation needed] which contains more than 920,000 entries.
+Contents
+
+    1 History
+    2 Thesauruses in IT
+    3 Literary thesauruses
+    4 Specialized thesauruses for information retrieval
+    5 Thesauruses's formats
+    6 Standards and manuals
+    7 See also
+    8 References
+    9 External links
+
+History
+
+In antiquity, Philo of Byblos authored the first text that could now be called a thesaurus. In Sanskrit, the Amarakosha is a thesaurus in verse form, written in the 4th century. The first example of the modern genre, Roget's Thesaurus, was compiled in 1805 by Peter Mark Roget, and published in 1852. Entries in Roget's Thesaurus are listed conceptually rather than alphabetically.
+
+Although including synonyms, a thesaurus should not be taken as a complete list of all the synonyms for a particular word. The entries are also designed for drawing distinctions between similar words and assisting in choosing exactly the right word. Unlike a dictionary, a thesaurus entry does not give the definition of words.
+
+The word "thesaurus" is derived from 16th-century New Latin, in turn from Latin thēsaurus, which is the latinisation of the Greek θησαυρός (thēsauros), literally "treasure store", generally meaning a collection of things which are of big importance or value (and thus the medieval rank of thesaurer was a synonym for treasurer). This meaning has been largely supplanted by Roget's usage of the term.
+
+Thesauruses in IT
+
+In Information Science, Library Science, and Information Technology, specialized thesauruses are designed for information retrieval. They are a type of controlled vocabulary, for indexing or tagging purposes. Such a thesaurus can be used as the basis of an index for online material. The Art and Architecture Thesaurus, for example, is used to index the Canadian Information retrieval thesauruses are formally organized so that existing relationships between concepts are made clear. As a result, they are more complex than simpler controlled vocabularies such as authority lists and synonym rings. Each term is placed in context, allowing a user to distinguish between "bureau"/"buro" the office and "bureau"/"buro" the furniture. Following international standards, they are generally arranged hierarchically by themes, topics or facets. Unlike a literary thesaurus, these specialized thesauruses typically focus on one discipline, subject or field of study.
+
+In information technology, a thesaurus represents a database or list of semantically orthogonal topical search keys. In the field of Artificial Intelligence, a thesaurus may sometimes be referred to as an ontology.
+
+Thesauruses for information retrieval are typically constructed by information specialists, and have their own unique vocabulary defining different kinds of terms and relationships:
+
+Terms are the basic semantic units for conveying concepts. They are usually single-word nouns, since nouns are the most concrete part of speech. Verbs can be converted to nouns – "cleans" to "cleaning", "reads" to "reading", and so on. Adjectives and adverbs, however, seldom convey any meaning useful for indexing. When a term is ambiguous, a “scope note” can be added to ensure consistency, and give direction on how to interpret the term. Not every term needs a scope note, but their presence is of considerable help in using a thesaurus correctly and reaching a correct understanding of the given field of knowledge.
+
+"Term relationships" are links between terms. These relationships can be divided into three types: hierarchical, equivalency or associative.
+
+    Hierarchical relationships are used to indicate terms which are narrower and broader in scope. A "Broader Term" (BT) or hyperonym is a more general term, e.g. “Apparatus” is a generalization of “Computers”. Reciprocally, a Narrower Term (NT) or hyponym is a more specific term, e.g. “Digital Computer” is a specialization of “Computer”. BT and NT are reciprocals; a broader term necessarily implies at least one other term which is narrower. BT and NT are used to indicate class relationships, as well as part-whole relationships (meronyms and holonyms).
+
+    The equivalency relationship is used primarily to connect synonyms and near-synonyms. Use (USE) and Used For (UF) indicators are used when an authorized term is to be used for another, unauthorized, term; for example, the entry for the authorized term "Frequency" could have the indicator "UF Pitch". Reciprocally, the entry for the unauthorized term "Pitch" would have the indicator "USE Frequency". Unauthorized terms are often called "entry vocabulary", "entry points", "lead-in terms", or "non-preferred terms", pointing to the authorized term (also referred to as the Preferred Term or Descriptor) that has been chosen to stand for the concept. As such, their presence in text can be used by automated indexing software to suggest the Preferred Term being used as an Indexing Term.
+
+    Associative relationships are used to connect two related terms whose relationship is neither hierarchical nor equivalent. This relationship is described by the indicator "Related Term" (RT). Associative relationships should be applied with caution, since excessive use of RTs will reduce specificity in searches. Consider the following: if the typical user is searching with term "A", would they also want resources tagged with term "B"? If the answer is no, then an associative relationship should not be established.
+
+Literary thesauruses
+
+    Thesaurus of English Words & Phrases (ed. P. Roget); ISBN 0-06-272037-6, see: Roget's Thesaurus.
+    World Thesaurus (ed. C. Laird); ISBN 0-671-51983-2. This edition has been used in successive editions since 1971 by Webster's:
+        Charlton Laird. Webster's New World Thesaurus. Macmillan USA; 1999 (4th edition). ISBN 978-0-02-863122-6. p. 894.
+    Oxford American Desk Thesaurus (ed. C. Lindberg); ISBN 0-19-512674-2
+    Oxford Paperback Thesaurus: Third Edition; ISBN 978-0-19-861425-8
+    Random House Word Menu by Stephen Glazier; ISBN 0-679-40030-3
+    Historical Thesaurus of English (HTE)
+    WordNet
+    OpenThesaurus
+    The Well-Spoken Thesaurus by Tom Heehler; ISBN 978-1-4022-4305-9
+
+Specialized thesauruses for information retrieval
+
+    NAL Agricultural Thesaurus, (United States National Agricultural Library, United States Department of Agriculture)
+    AGROVOC Thesaurus, (Food and Agriculture Organization of the United Nations)
+    Wageningen UR Thesaurus viewer, bilangual life sciences thesaurus
+    Art and Architecture Thesaurus, (Getty Institute)
+    Clinician's Thesaurus, (by E.Zuckerman); ISBN 1-57230-569-X
+    European Thesaurus on International Relations and Area Studies; ISBN 978392767411
+    European Training Thesaurus; ISBN 978-92-896-0471-0, (European Centre for the Development of Vocational Training - Cedefop)
+    Eurovoc Thesaurus, (Europa Publications Office)
+    Evaluation Thesaurus (by. M. Scriven); ISBN 0-8039-4364-4
+    GEMET - GEneral Multilingual Environmental Thesaurus, (European Environment Agency)
+    Medical Subject Headings, (United States National Library of Medicine)
+    Global Legal Information Network Thesaurus, GLIN Subject Term Index
+    Thesaurus of Psychological Index Terms (APA); ISBN 1-55798-775-0
+    Thesaurus for Graphic Materials, Library of Congress tool for indexing visual materials
+    Reegle Clean Energy and Climate Change Thesaurus, REEEP
+
+Thesauruses's formats
+
+RDF thesaurus formats:
+
+    TIF RDF Thesaurus Interchange Format, SWAD-E Project (2003)
+    ILRT RDF thesaurus draft specification (2001)
+    Limber Project RDF schema for ISO compliant multi-lingual thesauri (2001)
+    CERES[disambiguation needed]/NBII Project RDF thesaurus descriptor standard (2000)
+    DRC DAML+OIL ontology for the CALL thesaurus (2002)
+    ETB[disambiguation needed] RDF schema for the multilingual educational thesaurus version 0.4 (2001)
+    GEM Consortium RDF schema for monolingual thesauri (2002)
+    Agrovoc/Kaon RDF ontology/thesaurus schema (2001)
+    Wordnet RDF schema by Sergey Melnik
+
+XML thesaurus formats:
+
+    MARC-21 XMLSchema.
+    Zthes Z39.50 profile for thesaurus navigation (2001)
+    TML[disambiguation needed] thesaurus markup language (1999)
+    ADL[disambiguation needed] Thesaurus Protocol XML formats (2002)
+    MeSH (medical format, 2001)
+    GEMET XML format (2003)
+    APAIS XML thesaurus format, an extension of Zthes (2000)
+    Open University thesaurus schemas (2002)
+    Soergel XML thesaurus specification (2001)
+
+In Hybrid: The 1200 Word Thesaurus-Dictionary for Easy Memorization, author Zac Toa includes the definition alongside each synonym. This facilitates effective memorization and understanding.
+Standards and manuals
+
+The ANSI/NISO Z39.19 Standard of 2005 defines guidelines and conventions for the format, construction, testing, maintenance, and management of monolingual controlled vocabularies including lists, synonym rings, taxonomies, and thesauruses.[1]
+
+For multilingual vocabularies, the ISO 5964 Guidelines for the establishment and development of multilingual thesauri can be applied.
