@@ -84,3 +84,5 @@ void not_of(char *first);
 void frequency_array(double *);
 void search(char *first);
 int add_document_to_postingslist(char *fileinput);
+int persistent_postingslist(char *fileinput,char *originalfile);
+void serialize_postings_list();
