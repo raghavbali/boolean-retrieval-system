@@ -38,7 +38,7 @@ src/cluster.c :
 
 
 bin/HierarchicalClustering.sh : 
-	- This script file has been added to perform clustering based on FIHC algorithm. The above changes have been done specifically for this. The FIHC source and implementation can be found at : 
+	- This script file has been added to perform clustering based on FIHC algorithm. The above changes have been done specifically for this. The FIHC source and implementation can be found in the/cluster directory.
 
 
 
