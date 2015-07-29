@@ -1,0 +1,1 @@
+This project is implementation of Boolean Query based Keyword Retrieval built on top of Porter's Stemmer and Inverted Index based on Posting's list. Using the preprocessing done by this implementation, FIHC algorithm is implemented which is an efficient and scalable algorithm for hierarchical document clustering.
